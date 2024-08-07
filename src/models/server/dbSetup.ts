@@ -12,7 +12,10 @@ export default async function getOrCreateDB(){
     console.log("Database connection")
   } catch (error) {
     try {
-      await databases.create(db, db)
+      console.log("hi db")
+       await databases.create(db, db)
+      // console.log("db name is ", db,db)
+
       console.log("database created")
       //create collections
       await Promise.all([
